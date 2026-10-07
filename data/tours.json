@@ -1,0 +1,77 @@
+[
+  {
+    "id": "san-gennaro-catacombs-entry-ticket",
+    "badge": "self-guided",
+    "ribbon": "Entry",
+    "title": "San Gennaro Catacombs Entry Ticket",
+    "description": "Entry to the Catacombs of San Gennaro in Naples, with access to the upper and lower galleries and the Basilica of St Agrippinus.",
+    "includes": [
+      "Entry to the San Gennaro Catacombs",
+      "Access to both catacomb levels",
+      "Reserved time slot",
+      "Instant mobile confirmation"
+    ],
+    "duration": "Approx. 1 hour",
+    "rating": 4.8,
+    "reviews": 1240,
+    "price": 11,
+    "image": "/images/sg-gallery.jpg",
+    "imageAlt": "Vaulted tufa-stone gallery of the San Gennaro Catacombs with guided visitor group",
+    "hrefPath": "",
+    "hrefExtra": "",
+    "featured": false,
+    "bestFor": "Visitors who want to see the catacombs at their own pace",
+    "priceTableColumn1": "Approx. 1 hour",
+    "priceTableFeature": "No"
+  },
+  {
+    "id": "san-gennaro-catacombs-guided-tour",
+    "badge": "guided",
+    "ribbon": "Most Popular",
+    "title": "San Gennaro Catacombs Guided Tour",
+    "description": "A guided visit through both levels of the catacombs, covering the frescoes, burial niches, the basilica and the story of St Januarius.",
+    "includes": [
+      "Entry to the San Gennaro Catacombs",
+      "Guided visit through both levels",
+      "Stories of San Gennaro and Rione Sanità",
+      "Reserved time slot"
+    ],
+    "duration": "Approx. 1.5 hours",
+    "rating": 4.9,
+    "reviews": 3820,
+    "price": 15,
+    "image": "/images/sg-basilica.jpg",
+    "imageAlt": "Underground Basilica of St Agrippinus in the Catacombs of San Gennaro",
+    "hrefPath": "",
+    "hrefExtra": "",
+    "featured": true,
+    "bestFor": "Visitors who want the history and context explained",
+    "priceTableColumn1": "Approx. 1.5 hours",
+    "priceTableFeature": "Yes — guided visit"
+  },
+  {
+    "id": "san-gennaro-catacombs-private-tour",
+    "badge": "guided",
+    "ribbon": "Private",
+    "title": "San Gennaro Catacombs Private Guided Tour",
+    "description": "A private guided visit for your group, with a flexible pace and time for questions.",
+    "includes": [
+      "Entry to the San Gennaro Catacombs",
+      "Private guide for your group",
+      "Flexible pace",
+      "Reserved time slot"
+    ],
+    "duration": "Approx. 1.5 hours",
+    "rating": 4.9,
+    "reviews": 460,
+    "price": 45,
+    "image": "/images/sg-niches.jpg",
+    "imageAlt": "Ancient loculi burial niches carved into tufa rock walls",
+    "hrefPath": "",
+    "hrefExtra": "",
+    "featured": false,
+    "bestFor": "Families and small groups wanting a private visit",
+    "priceTableColumn1": "Approx. 1.5 hours",
+    "priceTableFeature": "Yes — private guide"
+  }
+]

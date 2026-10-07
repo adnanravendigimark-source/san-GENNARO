@@ -1,0 +1,16 @@
+{
+  "heroBadge": "HISTORY / FAITH / NAPLES",
+  "heroHeading": "Step into the Ancient\nSan Gennaro\nCatacombs",
+  "heroSubheading": "Explore a hidden world beneath Naples, where faith, history and art come together in one of the most extraordinary underground sites in Italy.",
+  "heroImage": "/images/sg-hero-arch.jpg",
+  "heroImageAlt": "Atmospheric candlelit corridor in San Gennaro Catacombs in Naples",
+  "showFeaturedTour": true,
+  "featuredTourId": "san-gennaro-catacombs-guided-tour",
+  "featuredBadgeLabel": "Recommended",
+  "featuredUrgencyText": "Limited time slots",
+  "featuredReasons": [
+    "Reserve a time slot in advance",
+    "Instant mobile confirmation",
+    "Check the booking page for cancellation terms"
+  ]
+}
