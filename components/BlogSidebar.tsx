@@ -22,6 +22,8 @@ export default function BlogSidebar({
   compareLinkText = "Compare San Gennaro Catacombs Tickets →",
   recommendedBadge,
   searchPlaceholder = "",
+  ctaHeading = "",
+  ctaBody = "",
 }: {
   slug: string;
   popularPosts: Post[];
@@ -31,6 +33,8 @@ export default function BlogSidebar({
   compareLinkText?: string;
   recommendedBadge?: string;
   searchPlaceholder?: string;
+  ctaHeading?: string;
+  ctaBody?: string;
 }) {
   const [search, setSearch] = useState("");
 
@@ -115,10 +119,10 @@ export default function BlogSidebar({
           <TicketIcon className="h-5 w-5" />
         </div>
         <p className="mt-3.5 font-display text-base font-bold text-white">
-          Compare San Gennaro Catacombs Tickets
+          {ctaHeading}
         </p>
         <p className="mt-1.5 text-xs leading-relaxed text-white/80">
-          Find the best tour options, departure times and prices in one place.
+          {ctaBody}
         </p>
         <a
           href="/#tours"
