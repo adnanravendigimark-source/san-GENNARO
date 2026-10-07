@@ -80,7 +80,7 @@ export default function TourCard({
 
         {/* Footer pinned to the bottom of the card regardless of content above */}
         {recommended ? (
-          <div className="mt-auto border-t border-[#B8913F]/20 pt-4">
+          <div className="mt-auto border-t border-chichen-gold/20 pt-4">
             <div className="flex items-end justify-between gap-2">
               <div>
                 <p className="text-[11px] uppercase tracking-wide text-stone-900/40">from</p>
@@ -107,7 +107,7 @@ export default function TourCard({
               <p className="text-[11px] uppercase tracking-wide text-stone-900/40">from</p>
               <div className="flex items-baseline gap-2">
                 {tour.originalPrice && (
-                  <span className="text-sm text-stone-900/35 line-through">${tour.originalPrice}</span>
+                  <span className="text-sm text-stone-900/35 line-through">€{tour.originalPrice}</span>
                 )}
                 <span className="font-serif text-2xl font-bold text-stone-900">{tour.price > 0 ? `€${tour.price}` : "Check price"}</span>
                 <span className="text-xs text-stone-900/45">/ person</span>

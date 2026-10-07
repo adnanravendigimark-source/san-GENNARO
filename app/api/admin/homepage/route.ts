@@ -3,6 +3,7 @@ import { revalidatePath } from "next/cache";
 import {
   getHomepageContent,
   saveHomepageCopy,
+  ensureHomepageColumns,
   saveHomepageSections,
   saveSiteHeader,
   saveSiteFooter,
@@ -41,7 +42,8 @@ export async function PUT(req: Request) {
       return NextResponse.json({ error: "Invalid request body." }, { status: 400 });
     }
 
-    await Promise.all([
+    const saveAll = async () => {
+      await Promise.all([
       saveHomepageCopy({
         heroBadge: body.heroBadge,
         heroHeading: body.heroHeading,
@@ -64,7 +66,18 @@ export async function PUT(req: Request) {
       saveSiteHeader(body.header),
       saveSiteFooter(body.footer),
       saveSiteTheme(body.theme),
-    ]);
+      ]);
+    };
+    try {
+      await saveAll();
+    } catch (e) {
+      if (/column .* does not exist/i.test(e instanceof Error ? e.message : String(e))) {
+        await ensureHomepageColumns();
+        await saveAll();
+      } else {
+        throw e;
+      }
+    }
 
     // Belt-and-suspenders on top of the existing force-dynamic + no-store
     // setup (middleware.ts) — explicitly clears Next's Full Route Cache

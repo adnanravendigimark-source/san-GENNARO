@@ -128,7 +128,6 @@ export interface BlogPageSection {
   heading: string;
   subheading: string;
   emptyStateText: string;
-  featuredLinkText: string;
   ctaHeading: string;
   ctaButtonText: string;
   backToGuidesText: string;
@@ -221,7 +220,6 @@ export interface HomepageContent {
   featuredTourId: string;
   featuredBadgeLabel: string;
   featuredUrgencyText: string;
-  featuredReasons: string[];
   sections: HomepageSections;
   header: HeaderContent;
   footer: FooterContent;
@@ -450,7 +448,6 @@ export const DEFAULT_SECTIONS: HomepageSections = {
     heading: "San Gennaro Catacombs Visitor Guide",
     subheading: "Tickets, tours, how to get there and what to see — everything you need to plan a visit to the Catacombs of San Gennaro in Naples.",
     emptyStateText: "No articles published yet — check back soon.",
-    featuredLinkText: "Read the guide",
     ctaHeading: "Ready to book your San Gennaro Catacombs ticket?",
     ctaButtonText: "Compare San Gennaro Catacombs Tickets →",
     backToGuidesText: "← All guides",
@@ -479,17 +476,12 @@ const DEFAULT_HOMEPAGE_CONTENT: HomepageContent = {
   heroImageAlt: "Atmospheric candlelit corridor in San Gennaro Catacombs in Naples",
   heroCtaPrimaryText: "Book Your Tickets",
   heroCtaPrimaryHref: "#tours",
-  heroCtaSecondaryText: "Discover What to Expect",
-  heroCtaSecondaryHref: "#what-to-expect",
+  heroCtaSecondaryText: "",
+  heroCtaSecondaryHref: "",
   showFeaturedTour: true,
   featuredTourId: "san-gennaro-catacombs-guided-tour",
   featuredBadgeLabel: "Recommended",
   featuredUrgencyText: "Limited time slots",
-  featuredReasons: [
-    "Reserve a time slot in advance",
-    "Instant mobile confirmation",
-    "Check the booking page for cancellation terms",
-  ],
   sections: DEFAULT_SECTIONS,
   header: DEFAULT_HEADER,
   footer: DEFAULT_FOOTER,
@@ -504,19 +496,6 @@ const DEFAULT_HOMEPAGE_CONTENT: HomepageContent = {
   ogDescription: "",
   ogImage: "",
 };
-
-function parseReasons(value: unknown): string[] {
-  if (Array.isArray(value)) return value;
-  if (typeof value === "string") {
-    try {
-      const parsed = JSON.parse(value);
-      return Array.isArray(parsed) ? parsed : [];
-    } catch {
-      return [];
-    }
-  }
-  return [];
-}
 
 function parseJsonWithDefault<T extends object>(value: unknown, fallback: T): T {
   let parsed: unknown = value;
@@ -541,13 +520,12 @@ function rowToHomepage(row: any): HomepageContent {
     heroImageAlt: row.hero_image_alt || "",
     heroCtaPrimaryText: row.hero_cta_primary_text || DEFAULT_HOMEPAGE_CONTENT.heroCtaPrimaryText,
     heroCtaPrimaryHref: row.hero_cta_primary_href || DEFAULT_HOMEPAGE_CONTENT.heroCtaPrimaryHref,
-    heroCtaSecondaryText: row.hero_cta_secondary_text || DEFAULT_HOMEPAGE_CONTENT.heroCtaSecondaryText,
+    heroCtaSecondaryText: row.hero_cta_secondary_text || "",
     heroCtaSecondaryHref: row.hero_cta_secondary_href || DEFAULT_HOMEPAGE_CONTENT.heroCtaSecondaryHref,
     showFeaturedTour: !!row.show_featured_tour,
     featuredTourId: row.featured_tour_id || "",
     featuredBadgeLabel: row.featured_badge_label || "",
     featuredUrgencyText: row.featured_urgency_text || "",
-    featuredReasons: parseReasons(row.featured_reasons),
     sections: {
       heroTrust: { ...DEFAULT_SECTIONS.heroTrust, ...sectionsRaw.heroTrust },
       tours: { ...DEFAULT_SECTIONS.tours, ...sectionsRaw.tours },
@@ -669,22 +647,20 @@ export async function saveRecommendedTour(data: {
   featuredTourId: string;
   featuredBadgeLabel: string;
   featuredUrgencyText: string;
-  featuredReasons: string[];
 }): Promise<void> {
   await sql`
     INSERT INTO homepage (
       id, show_featured_tour, featured_tour_id, featured_badge_label,
-      featured_urgency_text, featured_reasons
+      featured_urgency_text
     ) VALUES (
       1, ${!!data.showFeaturedTour}, ${data.featuredTourId}, ${data.featuredBadgeLabel},
-      ${data.featuredUrgencyText}, ${JSON.stringify(data.featuredReasons || [])}::jsonb
+      ${data.featuredUrgencyText}
     )
     ON CONFLICT (id) DO UPDATE SET
       show_featured_tour = EXCLUDED.show_featured_tour,
       featured_tour_id = EXCLUDED.featured_tour_id,
       featured_badge_label = EXCLUDED.featured_badge_label,
-      featured_urgency_text = EXCLUDED.featured_urgency_text,
-      featured_reasons = EXCLUDED.featured_reasons
+      featured_urgency_text = EXCLUDED.featured_urgency_text
   `;
 }
 
@@ -722,4 +698,31 @@ export async function saveSiteTheme(theme: ThemeColors): Promise<void> {
     ON CONFLICT (id) DO UPDATE SET
       theme_json = EXCLUDED.theme_json
   `;
+}
+
+// Self-heal for databases created before the homepage CMS columns existed:
+// idempotent, so it is safe to call repeatedly (same statements as
+// scripts/setup-db.mjs). Used by the admin save route when a save fails
+// with "column does not exist", then the save is retried once.
+export async function ensureHomepageColumns(): Promise<void> {
+  const stmts = [
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS no_follow BOOLEAN NOT NULL DEFAULT false`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS canonical_url TEXT NOT NULL DEFAULT ''`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS og_title TEXT NOT NULL DEFAULT ''`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS og_description TEXT NOT NULL DEFAULT ''`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS og_image TEXT NOT NULL DEFAULT ''`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS hero_gallery JSONB NOT NULL DEFAULT '[]'`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS hero_cta_primary_text TEXT NOT NULL DEFAULT ''`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS hero_cta_primary_href TEXT NOT NULL DEFAULT ''`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS hero_cta_secondary_text TEXT NOT NULL DEFAULT ''`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS hero_cta_secondary_href TEXT NOT NULL DEFAULT ''`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS meta_title TEXT NOT NULL DEFAULT ''`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS meta_description TEXT NOT NULL DEFAULT ''`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS focus_keyword TEXT NOT NULL DEFAULT ''`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS sections_json JSONB NOT NULL DEFAULT '{}'`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS header_json JSONB NOT NULL DEFAULT '{}'`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS footer_json JSONB NOT NULL DEFAULT '{}'`,
+    sql`ALTER TABLE homepage ADD COLUMN IF NOT EXISTS theme_json JSONB NOT NULL DEFAULT '{}'`,
+  ];
+  for (const q of stmts) await q;
 }

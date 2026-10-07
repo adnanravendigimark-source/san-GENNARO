@@ -533,12 +533,12 @@ async function seedHomepage() {
     INSERT INTO homepage (
       id, hero_badge, hero_heading, hero_subheading, hero_image, hero_image_alt,
       rating_value, rating_count, show_featured_tour, featured_tour_id,
-      featured_badge_label, featured_urgency_text, featured_reasons
+      featured_badge_label, featured_urgency_text
     ) VALUES (
       1, ${h.heroBadge || ""}, ${h.heroHeading || ""}, ${h.heroSubheading || ""},
       ${h.heroImage || "/images/sg-hero.svg"}, ${h.heroImageAlt || ""}, ${h.ratingValue || ""}, ${h.ratingCount || ""},
       ${!!h.showFeaturedTour}, ${h.featuredTourId || ""}, ${h.featuredBadgeLabel || ""},
-      ${h.featuredUrgencyText || ""}, ${JSON.stringify(h.featuredReasons || [])}::jsonb
+      ${h.featuredUrgencyText || ""}
     )
     ON CONFLICT (id) DO UPDATE SET
       hero_badge = EXCLUDED.hero_badge,
@@ -551,8 +551,7 @@ async function seedHomepage() {
       show_featured_tour = EXCLUDED.show_featured_tour,
       featured_tour_id = EXCLUDED.featured_tour_id,
       featured_badge_label = EXCLUDED.featured_badge_label,
-      featured_urgency_text = EXCLUDED.featured_urgency_text,
-      featured_reasons = EXCLUDED.featured_reasons
+      featured_urgency_text = EXCLUDED.featured_urgency_text
   `;
   console.log("homepage: seeded from data/homepage.json.");
 }

@@ -14,7 +14,7 @@ export default function HeaderNav({ links }: { links?: NavLink[] }) {
     { label: "Contact", href: "/contact" },
   ];
 
-  const navLinks = defaultLinks;
+  const navLinks = links && links.length > 0 ? links : defaultLinks;
 
   return (
     <nav className="hidden items-center gap-8 md:flex">

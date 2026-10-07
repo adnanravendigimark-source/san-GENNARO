@@ -35,7 +35,6 @@ export async function PUT(req: Request) {
       featuredTourId: body.featuredTourId,
       featuredBadgeLabel: body.featuredBadgeLabel,
       featuredUrgencyText: body.featuredUrgencyText,
-      featuredReasons: body.featuredReasons,
     });
     return NextResponse.json({ ok: true });
   } catch (err) {
