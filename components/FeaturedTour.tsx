@@ -14,7 +14,7 @@ export default async function FeaturedTour() {
   if (!tour) return null;
 
   return (
-    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#E8DFC7] bg-[#FAF7F2]/95 px-3.5 py-2.5 shadow-[0_-6px_20px_rgba(0,0,0,0.12)] backdrop-blur sm:hidden">
+    <div className="fixed inset-x-0 bottom-0 z-40 border-t border-[#EAE5DB] bg-white/95 px-3.5 py-2.5 shadow-[0_-6px_20px_rgba(0,0,0,0.08)] backdrop-blur sm:hidden">
       <div className="flex items-center gap-3">
         <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-lg">
           <SafeImage src={tour.image} alt={tour.imageAlt} fill sizes="48px" className="object-cover" />
@@ -33,7 +33,7 @@ export default async function FeaturedTour() {
           href={tour.href}
           target="_blank"
           rel="noopener nofollow sponsored"
-          className="shrink-0 rounded-full bg-chichen-navy px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white shadow-md transition hover:bg-chichen-navy/90"
+          className="shrink-0 rounded-full bg-[#C28E46] px-4 py-2 text-xs font-semibold uppercase tracking-wider text-white shadow-md shadow-[#C28E46]/20 transition hover:bg-[#B37F38]"
         >
           {bookNowText}
         </a>

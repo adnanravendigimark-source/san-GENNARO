@@ -18,10 +18,10 @@ export default async function FAQSection() {
     <section id="faq" className="py-16 sm:py-20 bg-white border-t border-stone-100">
       <div className="mx-auto max-w-4xl px-4 sm:px-6">
         <div className="text-center max-w-xl mx-auto">
-          <p className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-chichen-gold">
+          <p className="text-[11px] sm:text-xs font-bold tracking-[0.2em] uppercase text-[#C28E46]">
             {sections.faq.eyebrow}
           </p>
-          <h2 className="mt-2.5 font-serif text-3xl sm:text-4xl font-bold text-chichen-navy tracking-tight">
+          <h2 className="mt-2.5 font-serif text-3xl sm:text-4xl font-bold text-stone-900 tracking-tight">
             {sections.faq.heading}
           </h2>
         </div>

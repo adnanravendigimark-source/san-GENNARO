@@ -283,10 +283,10 @@ export const DEFAULT_FOOTER: FooterContent = {
 };
 
 export const DEFAULT_THEME: ThemeColors = {
-  primary: "#B8863B",   // Antique Roman Gold
-  secondary: "#18382E", // Forest Spruce
-  dark: "#16332B",      // Deep Spruce
-  accent: "#D4A559",    // Soft Gold
+  primary: "#C28E46",   // Warm Roman Gold ⭐
+  secondary: "#C28E46", // Warm Roman Gold ⭐
+  dark: "#1E2522",      // Warm Dark Charcoal
+  accent: "#D4A559",    // Soft Light Gold
 };
 
 export const DEFAULT_HERO_TRUST: HeroTrustSection = {

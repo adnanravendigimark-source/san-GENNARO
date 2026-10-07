@@ -25,13 +25,13 @@ body {
 
 /* Default brand-color CSS variables — space-separated RGB triplets. */
 :root {
-  --color-maya-forest: 24 56 46; /* #18382E - Deep Forest Spruce */
-  --color-maya-jungle: 35 78 65; /* #234E41 - Forest Green */
+  --color-maya-forest: 194 142 70; /* #C28E46 - Warm Roman Gold ⭐ */
+  --color-maya-jungle: 179 127 56; /* #B37F38 - Warm Amber Gold */
   --color-maya-ivory: 255 255 255; /* #FFFFFF - Pure White */
-  --color-maya-gold: 184 134 59; /* #B8863B - Antique Roman Gold ⭐ */
-  --color-maya-charcoal: 28 25 23; /* #1C1917 - Dark Charcoal */
-  --color-gold-400: 212 165 89; /* #D4A559 - Warm Roman Gold */
-  --color-maya-emerald: 24 56 46; /* #18382E - Deep Spruce ⭐ */
+  --color-maya-gold: 194 142 70; /* #C28E46 - Antique Roman Gold */
+  --color-maya-charcoal: 30 37 34; /* #1E2522 - Warm Dark Charcoal */
+  --color-gold-400: 212 165 89; /* #D4A559 - Light Gold */
+  --color-maya-emerald: 194 142 70; /* #C28E46 - Roman Gold */
 
   /* Compatibility aliases */
   --color-chichen-navy: var(--color-maya-forest);
@@ -75,7 +75,7 @@ body {
   list-style: decimal;
 }
 .rich-content a {
-  color: #18382E;
+  color: #C28E46;
   text-decoration: underline;
   text-underline-offset: 2px;
 }

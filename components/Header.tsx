@@ -34,7 +34,7 @@ export default async function Header() {
           {/* Book Tickets Pill Button */}
           <a
             href={ctaHref}
-            className="hidden md:inline-flex items-center gap-1.5 rounded-full bg-[#18382E] px-5 py-2.5 text-[13px] font-medium text-white shadow-sm transition-all duration-300 hover:bg-[#234E41] hover:shadow-md hover:scale-[1.02]"
+            className="hidden md:inline-flex items-center gap-1.5 rounded-full bg-[#C28E46] px-5 py-2.5 text-[13px] font-medium text-white shadow-sm shadow-[#C28E46]/20 transition-all duration-300 hover:bg-[#B37F38] hover:shadow-md hover:scale-[1.02]"
           >
             <span>{ctaText}</span>
             <span className="text-sm leading-none">→</span>

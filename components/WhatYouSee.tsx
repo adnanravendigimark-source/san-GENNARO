@@ -72,11 +72,11 @@ export default async function WhatYouSee() {
         )}
 
         {/* Bottom CTA banner */}
-        <div className="mt-12 flex flex-col items-start gap-4 rounded-2xl bg-chichen-navy p-8 text-white shadow-xl border border-white/10 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-base sm:text-lg font-bold text-white max-w-xl">{s.ctaText}</p>
+        <div className="mt-12 flex flex-col items-start gap-4 rounded-2xl bg-[#FAF8F5] p-8 text-stone-900 shadow-lg border border-[#EAE5DB] sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-base sm:text-lg font-bold text-stone-900 max-w-xl">{s.ctaText}</p>
           <a
             href={s.ctaHref}
-            className="shrink-0 rounded-full bg-chichen-gold px-7 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white shadow-md transition hover:bg-gold-400 hover:scale-[1.02]"
+            className="shrink-0 rounded-full bg-[#C28E46] px-7 py-3 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white shadow-md shadow-[#C28E46]/20 transition hover:bg-[#B37F38] hover:scale-[1.02]"
           >
             {s.ctaButtonText}
           </a>

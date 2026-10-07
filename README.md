@@ -24,7 +24,6 @@ Never commit `.env` (it is git-ignored). Use `.env.example` as the template.
 | `DATABASE_URL` | This project's Neon database (pooled, server-side only) |
 | `ADMIN_EMAIL` / `ADMIN_PASSWORD` | Owner account for `/admin` |
 | `ADMIN_SESSION_SECRET` | Signs admin session cookies (**required in production**) |
-| `GYG_PARTNER_ID` | GetYourGuide partner id used in every booking link |
 | `NEXT_PUBLIC_SITE_URL` | Public URL (see also `lib/site.ts` → `SITE_URL`) |
 | `BLOB_STORE_ID`, `BLOB_READ_WRITE_TOKEN` | Vercel Blob for image uploads (create a new store) |
 | `NEXT_PUBLIC_GA_ID` | Optional GA4 id; nothing loads when empty |
@@ -40,7 +39,7 @@ Ratings/reviews are optional: leave them at 0 and no stars or `aggregateRating` 
 ## Adding your tickets
 
 Admin → Tours → New: paste the GetYourGuide path (or full URL) in the booking-link field;
-`GYG_PARTNER_ID` is appended automatically.
+Booking links are used exactly as pasted in the admin; nothing is appended automatically.
 
 ## Production build
 

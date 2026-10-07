@@ -96,7 +96,7 @@ export default async function Hero() {
             <div className="mt-8 sm:mt-9 flex items-center">
               <a
                 href={content.heroCtaPrimaryHref || "#tours"}
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#18382E] px-8 py-3.5 text-xs sm:text-sm font-medium tracking-wide text-white shadow-md shadow-[#18382E]/15 transition-all duration-300 hover:bg-[#234E41] hover:shadow-lg hover:-translate-y-0.5"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#C28E46] px-8 py-3.5 text-xs sm:text-sm font-medium tracking-wide text-white shadow-md shadow-[#C28E46]/25 transition-all duration-300 hover:bg-[#B37F38] hover:shadow-lg hover:-translate-y-0.5"
               >
                 <span>{content.heroCtaPrimaryText || "Book Your Tickets"}</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>

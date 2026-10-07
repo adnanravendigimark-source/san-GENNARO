@@ -12,7 +12,7 @@ export default async function MustSeeRuins() {
           <span className="inline-flex items-center gap-1.5 rounded-full bg-stone-50 border border-stone-200 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-chichen-gold">
             <span>🏛️</span> {s.eyebrow}
           </span>
-          <h2 className="mt-3 font-serif text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-chichen-navy leading-[1.15] tracking-tight">
+          <h2 className="mt-3 font-serif text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-stone-900 leading-[1.15] tracking-tight">
             {s.heading}
           </h2>
           <div
@@ -22,7 +22,7 @@ export default async function MustSeeRuins() {
           <ul className="mt-6 space-y-3.5 text-xs sm:text-sm font-medium text-stone-800">
             {s.bullets.map((bullet, i) => (
               <li key={i} className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-chichen-navy text-white text-[10px] font-bold">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#C28E46] text-white text-[10px] font-bold">
                   ✓
                 </span>
                 <span className="leading-snug">{bullet}</span>
@@ -31,7 +31,7 @@ export default async function MustSeeRuins() {
           </ul>
           <a
             href={s.ctaHref}
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-chichen-navy px-7 py-3.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white shadow-sm transition-all hover:bg-chichen-navy/90 hover:shadow-md hover:scale-[1.02]"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#C28E46] px-7 py-3.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white shadow-md shadow-[#C28E46]/20 transition-all hover:bg-[#B37F38] hover:shadow-lg hover:scale-[1.02]"
           >
             <span>{s.ctaButtonText}</span>
             <span>→</span>

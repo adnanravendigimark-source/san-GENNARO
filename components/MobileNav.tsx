@@ -36,7 +36,7 @@ export default function MobileNav({
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
         aria-label={open ? "Close menu" : "Open menu"}
-        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#E8DFC7] bg-white text-chichen-charcoal transition hover:bg-[#FAF7F2]"
+        className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#EAE5DB] bg-white text-stone-800 transition hover:bg-[#FAF8F5]"
       >
         <svg viewBox="0 0 24 24" fill="none" className="h-5 w-5" stroke="currentColor" strokeWidth={1.8}>
           {open ? (
@@ -54,14 +54,14 @@ export default function MobileNav({
             aria-hidden="true"
             onClick={() => setOpen(false)}
           />
-          <div className="fixed inset-x-0 top-20 z-40 max-h-[calc(100vh-5rem)] overflow-y-auto border-b border-[#E8DFC7] bg-[#FAF7F2] shadow-2xl">
+          <div className="fixed inset-x-0 top-20 z-40 max-h-[calc(100vh-5rem)] overflow-y-auto border-b border-[#EAE5DB] bg-white shadow-2xl">
             <nav className="flex flex-col px-6 py-4">
               {navLinks.map((link) => (
                 <Link
                   key={link.href + link.label}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="border-b border-[#E8DFC7]/60 py-3.5 text-base font-medium text-chichen-charcoal transition hover:text-chichen-gold last:border-b-0"
+                  className="border-b border-[#EAE5DB]/60 py-3.5 text-base font-medium text-stone-800 transition hover:text-[#C28E46] last:border-b-0"
                 >
                   {link.label}
                 </Link>
@@ -71,7 +71,7 @@ export default function MobileNav({
               <Link
                 href={ctaHref}
                 onClick={() => setOpen(false)}
-                className="block rounded-full bg-chichen-navy py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-white shadow-md transition hover:bg-chichen-navy/90"
+                className="block rounded-full bg-[#C28E46] py-3.5 text-center text-sm font-semibold uppercase tracking-wider text-white shadow-md shadow-[#C28E46]/20 transition hover:bg-[#B37F38]"
               >
                 {ctaText} →
               </Link>

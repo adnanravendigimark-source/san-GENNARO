@@ -9,50 +9,50 @@ const config: Config = {
     extend: {
       colors: {
         // San Gennaro Catacombs Tickets palette:
-        // Pure white background, deep spruce green for dark text/buttons,
-        // and Roman antique gold as the warm accent.
+        // Pure white background, warm Roman gold / terracotta amber accent,
+        // and soft warm charcoal for dark text.
         stone: {
           50: "#FFFFFF",   // Pure White
-          100: "#F9F9F8",  // Off-white / Crisp surface
-          200: "#EFEFEF",  // Light border
+          100: "#FAF8F5",  // Off-white / Crisp warm surface
+          200: "#EAE5DB",  // Light border
           800: "#2B2824",
-          900: "#1C1917",  // Deep Charcoal
+          900: "#1E2522",  // Soft Charcoal
         },
         gold: {
-          400: "rgb(var(--color-gold-400) / <alpha-value>)",
-          500: "rgb(var(--color-maya-gold) / <alpha-value>)",  // Antique Roman Gold ⭐
-          600: "#9E702D",
+          400: "#D4A559",  // Light Gold
+          500: "#C28E46",  // Warm Roman Gold ⭐
+          600: "#A87635",
         },
         emerald: {
-          900: "#0F241E",  // Deep Spruce Forest
-          800: "#16332B",
-          700: "#18382E",  // Brand Dark Spruce ⭐
-          600: "#234E41",
+          900: "#C28E46",
+          800: "#B37F38",
+          700: "#C28E46",  // Roman Gold ⭐
+          600: "#B37F38",
         },
         maya: {
           forest: "rgb(var(--color-maya-forest) / <alpha-value>)",
           jungle: "rgb(var(--color-maya-jungle) / <alpha-value>)",
           ivory: "#FFFFFF",
           gold: "rgb(var(--color-maya-gold) / <alpha-value>)",
-          sand: "#EFEFEF",
-          sage: "#F5F5F5",
+          sand: "#EAE5DB",
+          sage: "#FAF8F5",
           charcoal: "rgb(var(--color-maya-charcoal) / <alpha-value>)",
           white: "#FFFFFF",
           emerald: "rgb(var(--color-maya-emerald) / <alpha-value>)",
-          dark: "#16332B",
+          dark: "#1E2522",
         },
         chichen: {
           navy: "rgb(var(--color-maya-forest) / <alpha-value>)",
-          ottoman: "#18382E",
+          ottoman: "#C28E46",
           gold: "rgb(var(--color-maya-gold) / <alpha-value>)",
           charcoal: "rgb(var(--color-maya-charcoal) / <alpha-value>)",
           ivory: "#FFFFFF",
-          sky: "#F9F9F8",
-          sand: "#EFEFEF",
+          sky: "#FAF8F5",
+          sand: "#EAE5DB",
         },
         navy: {
-          900: "#0F241E",
-          800: "#16332B",
+          900: "#1E2522",
+          800: "#2B2824",
         },
       },
       fontFamily: {
