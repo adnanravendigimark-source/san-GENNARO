@@ -29,10 +29,10 @@ export default function Logo({
 
   if (variant === "stacked") {
     return (
-      <Link href="/" className={`inline-flex flex-col items-center gap-1.5 ${className}`}>
-        <span className="relative block h-9 w-9 transition-transform duration-300 hover:scale-105">
+      <Link href="/" className={`inline-flex flex-col items-center gap-2 ${className}`}>
+        <span className="relative block h-11 w-11 transition-transform duration-300 hover:scale-105 drop-shadow-sm">
           {customSrc ? (
-            <Image src={customSrc} alt={resolvedAlt} fill sizes="80px" className="object-contain" priority />
+            <Image src={customSrc} alt={resolvedAlt} fill sizes="88px" className="object-contain" priority />
           ) : (
             <CatacombChurchIcon className="h-full w-full" />
           )}
@@ -40,12 +40,12 @@ export default function Logo({
         <div className="text-center leading-tight">
           <span
             className={`block font-serif text-xl sm:text-2xl font-bold tracking-[0.16em] ${
-              isDark ? "text-white" : "text-chichen-charcoal"
+              isDark ? "text-white" : "text-stone-900"
             }`}
           >
             {line1 || "SAN GENNARO"}
           </span>
-          <span className="block font-sans text-[9px] sm:text-[10px] font-semibold tracking-[0.24em] uppercase text-gold-400 mt-0.5">
+          <span className="block font-sans text-[9.5px] sm:text-[10.5px] font-bold tracking-[0.26em] uppercase text-[#C28E46] mt-1">
             {line2 || "CATACOMBS TICKETS"}
           </span>
         </div>
@@ -54,9 +54,9 @@ export default function Logo({
   }
 
   const image = (
-    <span className="relative block h-8 sm:h-9 w-8 sm:w-9 shrink-0 transition-transform duration-300 group-hover:scale-105">
+    <span className="relative block h-9 sm:h-10 w-9 sm:w-10 shrink-0 transition-transform duration-300 group-hover:scale-105 drop-shadow-sm">
       {customSrc ? (
-        <Image src={customSrc} alt={resolvedAlt} fill priority sizes="48px" className="object-contain" />
+        <Image src={customSrc} alt={resolvedAlt} fill priority sizes="52px" className="object-contain" />
       ) : (
         <CatacombChurchIcon className="h-full w-full" />
       )}
@@ -66,20 +66,20 @@ export default function Logo({
   const wordmark = (
     <div className="flex min-w-0 flex-col justify-center">
       <span
-        className={`block truncate font-serif text-[15px] sm:text-[17px] font-bold tracking-[0.16em] leading-tight ${
-          isDark ? "text-white group-hover:text-gold-400" : "text-chichen-charcoal group-hover:text-chichen-navy"
+        className={`block truncate font-serif text-[16px] sm:text-[18px] font-bold tracking-[0.14em] leading-tight transition-colors ${
+          isDark ? "text-white group-hover:text-[#D4A559]" : "text-stone-900 group-hover:text-[#C28E46]"
         }`}
       >
         {line1 || "SAN GENNARO"}
       </span>
-      <span className="block truncate font-sans text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.24em] uppercase text-gold-400 leading-none mt-1">
+      <span className="block truncate font-sans text-[8.5px] sm:text-[9.5px] font-bold tracking-[0.26em] uppercase text-[#C28E46] leading-none mt-1">
         {line2 || "CATACOMBS TICKETS"}
       </span>
     </div>
   );
 
   return (
-    <Link href="/" className={`group inline-flex min-w-0 items-center gap-2.5 sm:gap-3 ${className}`}>
+    <Link href="/" className={`group inline-flex min-w-0 items-center gap-3 ${className}`}>
       {image}
       {wordmark}
     </Link>

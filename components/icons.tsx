@@ -172,18 +172,56 @@ export function BriefcaseIcon({ className = "h-6 w-6" }: IconProps) {
 
 export function CatacombChurchIcon({ className = "h-8 w-8" }: IconProps) {
   return (
-    <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
-      {/* Outer arched facade silhouette */}
+    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className={className} aria-hidden="true">
+      <defs>
+        <linearGradient id="sgLogoGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#DFB775" />
+          <stop offset="50%" stopColor="#C28E46" />
+          <stop offset="100%" stopColor="#9E6E2E" />
+        </linearGradient>
+        <linearGradient id="sgLogoBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stopColor="#FAF7F2" />
+          <stop offset="100%" stopColor="#F3ECE0" />
+        </linearGradient>
+      </defs>
+
+      {/* Subtle outer gold circular badge */}
+      <circle cx="20" cy="20" r="19" fill="url(#sgLogoBgGrad)" stroke="url(#sgLogoGoldGrad)" strokeWidth="1.2" />
+      <circle cx="20" cy="20" r="17.2" stroke="#C28E46" strokeWidth="0.5" strokeDasharray="1.5 1.5" opacity="0.6" />
+
+      {/* Outer Roman Arch Portal */}
       <path
-        d="M6 38V18C6 9.163 13.163 2 22 2C30.837 2 38 9.163 38 18V38H6Z"
-        fill="#C9A87C"
+        d="M10.5 30.5V17.5C10.5 12.253 14.753 8 20 8C25.247 8 29.5 12.253 29.5 17.5V30.5"
+        stroke="url(#sgLogoGoldGrad)"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
-      {/* Cross on roof apex */}
-      <path d="M22 0V4M19.5 2H24.5" stroke="#9E7B54" strokeWidth="1.6" strokeLinecap="round" />
-      {/* 3 Inner white arch portal cutouts */}
-      <path d="M18.5 38V18C18.5 16.067 20.067 14.5 22 14.5C23.933 14.5 25.5 16.067 25.5 18V38H18.5Z" fill="#FFFFFF" />
-      <path d="M10.5 38V24C10.5 22.343 11.843 21 13.5 21C15.157 21 16.5 22.343 16.5 24V38H10.5Z" fill="#FFFFFF" />
-      <path d="M27.5 38V24C27.5 22.343 28.843 21 30.5 21C32.157 21 33.5 22.343 33.5 24V38H27.5Z" fill="#FFFFFF" />
+
+      {/* Inner Perspective Vault Arch */}
+      <path
+        d="M14.5 30.5V18.5C14.5 15.462 16.962 13 20 13C23.038 13 25.5 15.462 25.5 18.5V30.5"
+        stroke="url(#sgLogoGoldGrad)"
+        strokeWidth="1.1"
+        strokeLinecap="round"
+      />
+
+      {/* Deep Center Arch niche */}
+      <path
+        d="M17.5 30.5V20C17.5 18.62 18.62 17.5 20 17.5C21.38 17.5 22.5 18.62 22.5 20V30.5"
+        stroke="url(#sgLogoGoldGrad)"
+        strokeWidth="0.9"
+        strokeLinecap="round"
+      />
+
+      {/* Keystone / Cross at the arch peak */}
+      <path d="M20 4.8V7.2M18.8 6H21.2" stroke="url(#sgLogoGoldGrad)" strokeWidth="1.2" strokeLinecap="round" />
+
+      {/* Delicate subterranean lantern flame in the sanctum */}
+      <circle cx="20" cy="24" r="1.4" fill="url(#sgLogoGoldGrad)" />
+      <path d="M20 22.5V21" stroke="url(#sgLogoGoldGrad)" strokeWidth="0.8" strokeLinecap="round" />
+
+      {/* Foundation plinth bar */}
+      <path d="M8 30.5H32" stroke="url(#sgLogoGoldGrad)" strokeWidth="1.4" strokeLinecap="round" />
     </svg>
   );
 }
