@@ -9,10 +9,10 @@ export default async function MustSeeRuins() {
     <section id="must-see-ruins" className="bg-white py-20 sm:py-24 border-y border-stone-100">
       <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-8 lg:grid-cols-2 lg:items-center">
         <div>
-          <span className="inline-flex items-center gap-1.5 rounded-full bg-stone-50 border border-stone-200 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-[#B8863B]">
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-stone-50 border border-stone-200 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-chichen-gold">
             <span>🏛️</span> {s.eyebrow}
           </span>
-          <h2 className="mt-3 font-serif text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-[#18382E] leading-[1.15] tracking-tight">
+          <h2 className="mt-3 font-serif text-3xl sm:text-4xl lg:text-[2.5rem] font-bold text-chichen-navy leading-[1.15] tracking-tight">
             {s.heading}
           </h2>
           <div
@@ -22,7 +22,7 @@ export default async function MustSeeRuins() {
           <ul className="mt-6 space-y-3.5 text-xs sm:text-sm font-medium text-stone-800">
             {s.bullets.map((bullet, i) => (
               <li key={i} className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#18382E] text-white text-[10px] font-bold">
+                <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-chichen-navy text-white text-[10px] font-bold">
                   ✓
                 </span>
                 <span className="leading-snug">{bullet}</span>
@@ -31,7 +31,7 @@ export default async function MustSeeRuins() {
           </ul>
           <a
             href={s.ctaHref}
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#18382E] px-7 py-3.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white shadow-sm transition-all hover:bg-[#234E41] hover:shadow-md hover:scale-[1.02]"
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-chichen-navy px-7 py-3.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white shadow-sm transition-all hover:bg-chichen-navy/90 hover:shadow-md hover:scale-[1.02]"
           >
             <span>{s.ctaButtonText}</span>
             <span>→</span>

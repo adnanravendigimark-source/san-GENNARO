@@ -62,27 +62,27 @@ export default async function BlogIndexPage({ searchParams }: { searchParams?: {
               <nav aria-label="Breadcrumb" className="text-xs font-medium text-[#555049]/70">
                 <ol className="flex items-center gap-1.5">
                   <li>
-                    <Link href="/" className="hover:text-[#C28E46] transition-colors">
+                    <Link href="/" className="hover:text-chichen-gold transition-colors">
                       Home
                     </Link>
                   </li>
                   <li className="text-gray-400">&gt;</li>
-                  <li className="font-semibold text-[#1E2522]" aria-current="page">
+                  <li className="font-semibold text-chichen-charcoal" aria-current="page">
                     Blog
                   </li>
                 </ol>
               </nav>
 
-              <span className="mt-4 inline-block text-xs font-bold uppercase tracking-widest text-[#C28E46]">
+              <span className="mt-4 inline-block text-xs font-bold uppercase tracking-widest text-chichen-gold">
                 {s.eyebrow}
               </span>
 
-              <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-[#1E2522] sm:text-4xl lg:text-5xl">
+              <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-chichen-charcoal sm:text-4xl lg:text-5xl">
                 {s.heading}
               </h1>
 
               {/* Gold accent line */}
-              <div className="mt-3.5 mb-4 h-[2.5px] w-12 rounded-full bg-[#C28E46]" />
+              <div className="mt-3.5 mb-4 h-[2.5px] w-12 rounded-full bg-chichen-gold" />
 
               <p className="mt-2 text-xs leading-relaxed text-[#555049] sm:text-sm">
                 {s.subheading}

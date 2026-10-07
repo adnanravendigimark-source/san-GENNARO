@@ -33,7 +33,7 @@ const DEFAULT_CONTACT: ContactPageContent = {
   heroHeading: "Get in Touch",
   heroSubheading:
     "Questions about booking San Gennaro Catacombs tickets, guided visits or travel partnerships? Reach out directly.",
-  email: "info@sangennarocatacombstickets.com",
+  email: "livetravelpartner@gmail.com",
   emailLabel: "Email us directly",
   emailNote: "We typically reply within 1–2 business days.",
   reasonsHeading: "How We Can Help",

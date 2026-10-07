@@ -34,17 +34,17 @@ export default async function Hero() {
 
             {/* Category Tag: Gold Line + HISTORY / FAITH / NAPLES */}
             <div className="inline-flex items-center gap-3">
-              <span className="h-[1.5px] w-8 bg-[#9E7B54] shrink-0" />
-              <span className="text-[11px] sm:text-xs font-semibold tracking-[0.25em] uppercase text-[#9E7B54]">
+              <span className="h-[1.5px] w-8 bg-chichen-gold shrink-0" />
+              <span className="text-[11px] sm:text-xs font-semibold tracking-[0.25em] uppercase text-chichen-gold">
                 {content.heroBadge || "HISTORY / FAITH / NAPLES"}
               </span>
             </div>
 
             {/* Headline matching the exact typographic layout */}
-            <h1 className="mt-3.5 sm:mt-4 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[54px] xl:text-[62px] font-bold leading-[1.08] tracking-tight text-[#1E2522]">
+            <h1 className="mt-3.5 sm:mt-4 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-[54px] xl:text-[62px] font-bold leading-[1.08] tracking-tight text-chichen-charcoal">
               Step into the Ancient<br />
               San Gennaro<br />
-              <span className="font-serif italic font-normal text-[#C28E46]">Catacombs</span>
+              <span className="font-serif italic font-normal text-chichen-gold">Catacombs</span>
             </h1>
 
             {/* Subtitle / Intro Text */}
@@ -57,33 +57,33 @@ export default async function Hero() {
             <div className="mt-7 sm:mt-8 grid grid-cols-3 gap-2.5 sm:gap-4 pt-1 max-w-lg">
               {/* Badge 1 */}
               <div className="flex items-center gap-2.5">
-                <div className="text-[#C28E46] shrink-0">
+                <div className="text-chichen-gold shrink-0">
                   <AncientChurchIcon className="h-6 w-6 sm:h-7 sm:w-7" />
                 </div>
                 <div className="leading-tight">
-                  <span className="block font-bold text-xs sm:text-[13px] text-[#1E2522]">Ancient</span>
+                  <span className="block font-bold text-xs sm:text-[13px] text-chichen-charcoal">Ancient</span>
                   <span className="block text-[11px] sm:text-xs text-[#6B655D] mt-0.5">Christian History</span>
                 </div>
               </div>
 
               {/* Badge 2 */}
               <div className="flex items-center gap-2.5">
-                <div className="text-[#C28E46] shrink-0">
+                <div className="text-chichen-gold shrink-0">
                   <StunningMosaicIcon className="h-6 w-6 sm:h-7 sm:w-7" />
                 </div>
                 <div className="leading-tight">
-                  <span className="block font-bold text-xs sm:text-[13px] text-[#1E2522]">Stunning</span>
+                  <span className="block font-bold text-xs sm:text-[13px] text-chichen-charcoal">Stunning</span>
                   <span className="block text-[11px] sm:text-xs text-[#6B655D] mt-0.5">Mosaics & Art</span>
                 </div>
               </div>
 
               {/* Badge 3 */}
               <div className="flex items-center gap-2.5">
-                <div className="text-[#C28E46] shrink-0">
+                <div className="text-chichen-gold shrink-0">
                   <ExpertGuidesIcon className="h-6 w-6 sm:h-7 sm:w-7" />
                 </div>
                 <div className="leading-tight">
-                  <span className="block font-bold text-xs sm:text-[13px] text-[#1E2522]">Expert</span>
+                  <span className="block font-bold text-xs sm:text-[13px] text-chichen-charcoal">Expert</span>
                   <span className="block text-[11px] sm:text-xs text-[#6B655D] mt-0.5">Local Guides</span>
                 </div>
               </div>
@@ -93,7 +93,7 @@ export default async function Hero() {
             <div className="mt-8 sm:mt-9 flex items-center">
               <a
                 href={content.heroCtaPrimaryHref || "#tours"}
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-[#18382E] px-8 py-3.5 text-xs sm:text-sm font-medium tracking-wide text-white shadow-md shadow-[#18382E]/15 transition-all duration-300 hover:bg-[#234E41] hover:shadow-lg hover:-translate-y-0.5"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-chichen-navy px-8 py-3.5 text-xs sm:text-sm font-medium tracking-wide text-white shadow-md shadow-chichen-navy/15 transition-all duration-300 hover:bg-chichen-navy/90 hover:shadow-lg hover:-translate-y-0.5"
               >
                 <span>{content.heroCtaPrimaryText || "Book Your Tickets"}</span>
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>

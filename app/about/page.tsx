@@ -62,15 +62,15 @@ export default async function AboutPage() {
 
           <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-8 pt-24 sm:pt-28 lg:pt-32 pb-16 sm:pb-20 lg:pb-24">
             <div className="max-w-2xl">
-              <nav aria-label="Breadcrumb" className="text-xs font-medium text-chichen-charcoal/70">
+              <nav aria-label="Breadcrumb" className="text-xs font-medium text-[#555049]/70">
                 <ol className="flex items-center gap-1.5">
                   <li>
                     <Link href="/" className="hover:text-chichen-gold transition-colors">
                       Home
                     </Link>
                   </li>
-                  <li className="text-chichen-charcoal/40">&gt;</li>
-                  <li className="font-semibold text-chichen-navy" aria-current="page">
+                  <li className="text-gray-400">&gt;</li>
+                  <li className="font-semibold text-chichen-charcoal" aria-current="page">
                     About Us
                   </li>
                 </ol>
@@ -80,7 +80,7 @@ export default async function AboutPage() {
                 {about.heroEyebrow}
               </span>
 
-              <h1 className="mt-2 font-display text-3xl font-bold tracking-tight text-chichen-navy sm:text-4xl lg:text-5xl">
+              <h1 className="mt-2 font-serif text-3xl font-bold tracking-tight text-chichen-charcoal sm:text-4xl lg:text-5xl">
                 {about.heroHeading}
               </h1>
 
@@ -88,7 +88,7 @@ export default async function AboutPage() {
               <div className="mt-3.5 mb-4 h-[2.5px] w-12 rounded-full bg-chichen-gold" />
 
               <div
-                className="rich-content mt-3 text-xs leading-relaxed text-chichen-charcoal/85 sm:text-sm"
+                className="rich-content mt-2 text-xs leading-relaxed text-[#555049] sm:text-sm"
                 dangerouslySetInnerHTML={{ __html: about.heroSubheading }}
               />
             </div>

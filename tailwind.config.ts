@@ -19,8 +19,8 @@ const config: Config = {
           900: "#1C1917",  // Deep Charcoal
         },
         gold: {
-          400: "#D4A559",
-          500: "#B8863B",  // Antique Roman Gold ⭐
+          400: "rgb(var(--color-gold-400) / <alpha-value>)",
+          500: "rgb(var(--color-maya-gold) / <alpha-value>)",  // Antique Roman Gold ⭐
           600: "#9E702D",
         },
         emerald: {

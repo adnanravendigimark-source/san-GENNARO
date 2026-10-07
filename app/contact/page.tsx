@@ -58,27 +58,27 @@ export default async function ContactPage() {
               <nav aria-label="Breadcrumb" className="text-xs font-medium text-[#555049]/70">
                 <ol className="flex items-center gap-1.5">
                   <li>
-                    <Link href="/" className="hover:text-[#C28E46] transition-colors">
+                    <Link href="/" className="hover:text-chichen-gold transition-colors">
                       Home
                     </Link>
                   </li>
                   <li className="text-gray-400">&gt;</li>
-                  <li className="font-semibold text-[#1E2522]" aria-current="page">
+                  <li className="font-semibold text-chichen-charcoal" aria-current="page">
                     Contact
                   </li>
                 </ol>
               </nav>
 
-              <span className="mt-4 inline-block text-xs font-bold uppercase tracking-widest text-[#C28E46]">
+              <span className="mt-4 inline-block text-xs font-bold uppercase tracking-widest text-chichen-gold">
                 {contact.heroEyebrow || "CONTACT"}
               </span>
 
-              <h1 className="mt-2 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#1E2522]">
+              <h1 className="mt-2 font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-chichen-charcoal">
                 {contact.heroHeading || "Get in Touch"}
               </h1>
 
               {/* Gold accent line */}
-              <div className="mt-3.5 mb-4 h-[2.5px] w-12 rounded-full bg-[#C28E46]" />
+              <div className="mt-3.5 mb-4 h-[2.5px] w-12 rounded-full bg-chichen-gold" />
 
               <div
                 className="rich-content mt-2 text-xs leading-relaxed text-[#555049] sm:text-sm"
@@ -92,7 +92,7 @@ export default async function ContactPage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 py-14 sm:py-20">
           {/* Primary Email Card */}
           <div className="rounded-2xl border border-[#EAE5DB] bg-white p-8 sm:p-10 text-center shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition hover:shadow-md">
-            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#18382E] text-white shadow-md">
+            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-chichen-navy text-white shadow-md">
               <MailIcon className="h-6 w-6" />
             </div>
             <p className="mt-4 text-xs font-bold uppercase tracking-wider text-[#686E62]">
@@ -100,7 +100,7 @@ export default async function ContactPage() {
             </p>
             <a
               href={`mailto:${contact.email}`}
-              className="mt-1.5 inline-block break-all font-serif text-2xl sm:text-3xl font-bold text-[#1E2522] hover:text-[#C28E46] transition-colors"
+              className="mt-1.5 inline-block break-all font-serif text-2xl sm:text-3xl font-bold text-chichen-charcoal hover:text-chichen-gold transition-colors"
             >
               {contact.email}
             </a>
@@ -111,7 +111,7 @@ export default async function ContactPage() {
 
           {/* 3 Support Reason Cards */}
           <div className="mt-10">
-            <h2 className="text-center font-serif text-xl sm:text-2xl font-bold text-[#1E2522] mb-6">
+            <h2 className="text-center font-serif text-xl sm:text-2xl font-bold text-chichen-charcoal mb-6">
               {contact.reasonsHeading || "How We Can Help"}
             </h2>
             <div className="grid gap-5 sm:grid-cols-3">
@@ -120,12 +120,12 @@ export default async function ContactPage() {
                 return (
                   <div
                     key={title}
-                    className="flex flex-col rounded-2xl border border-[#EAE5DB] bg-white p-6 shadow-[0_2px_12px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-1 hover:border-[#C28E46]/50 hover:shadow-md"
+                    className="flex flex-col rounded-2xl border border-[#EAE5DB] bg-white p-6 shadow-[0_2px_12px_rgba(0,0,0,0.03)] transition duration-300 hover:-translate-y-1 hover:border-chichen-gold/50 hover:shadow-md"
                   >
-                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#FAF7F2] border border-[#EAE5DB] text-[#18382E]">
+                    <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#FAF7F2] border border-[#EAE5DB] text-chichen-navy">
                       <Icon className="h-5 w-5" />
                     </div>
-                    <h3 className="mt-4 text-[15px] font-bold text-[#1E2522] leading-snug">{title}</h3>
+                    <h3 className="mt-4 text-[15px] font-bold text-chichen-charcoal leading-snug">{title}</h3>
                     <div
                       className="rich-content mt-2 text-xs sm:text-[13px] text-[#555049] leading-relaxed flex-1"
                       dangerouslySetInnerHTML={{ __html: body }}
@@ -147,13 +147,13 @@ export default async function ContactPage() {
           )}
 
           {/* Bottom CTA block */}
-          <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-5 rounded-2xl bg-[#18382E] p-8 text-white shadow-xl">
+          <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-5 rounded-2xl bg-chichen-navy p-8 text-white shadow-xl">
             <p className="text-base sm:text-lg font-bold text-white text-center sm:text-left">
               {contact.ctaHeading || "Ready to explore the San Gennaro Catacombs?"}
             </p>
             <a
               href="/#tours"
-              className="shrink-0 rounded-full bg-[#C28E46] px-6 py-3 text-xs sm:text-sm font-semibold tracking-wide text-white shadow-md transition hover:bg-[#A87935] hover:scale-[1.02]"
+              className="shrink-0 rounded-full bg-chichen-gold px-6 py-3 text-xs sm:text-sm font-semibold tracking-wide text-white shadow-md transition hover:bg-[#A87935] hover:scale-[1.02]"
             >
               {contact.ctaButtonLabel || "Compare San Gennaro Catacombs Tickets"} →
             </a>

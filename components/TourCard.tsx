@@ -90,13 +90,13 @@ export default function TourCard({
                 href={tour.href}
                 target="_blank"
                 rel="noopener nofollow sponsored"
-                className="flex shrink-0 items-center gap-1.5 rounded-full bg-[#18382E] px-5 py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white shadow-md shadow-[#18382E]/20 transition-all duration-300 hover:bg-[#234E41] hover:scale-[1.02]"
+                className="flex shrink-0 items-center gap-1.5 rounded-full bg-chichen-navy px-5 py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white shadow-md shadow-chichen-navy/20 transition-all duration-300 hover:bg-chichen-navy/90 hover:scale-[1.02]"
               >
                 {bookNowText}
               </a>
             </div>
             {recommended.urgencyText && (
-              <p className="mt-2.5 flex items-center gap-1 text-[11px] font-semibold text-[#B8863B]">
+              <p className="mt-2.5 flex items-center gap-1 text-[11px] font-semibold text-chichen-gold">
                 <LockIcon className="h-3 w-3" /> {recommended.urgencyText}
               </p>
             )}
@@ -117,7 +117,7 @@ export default function TourCard({
               href={tour.href}
               target="_blank"
               rel="noopener nofollow sponsored"
-              className="rounded-full bg-[#18382E] px-5 py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white shadow-md shadow-[#18382E]/20 transition-all duration-300 hover:bg-[#234E41] hover:scale-[1.02]"
+              className="rounded-full bg-chichen-navy px-5 py-2.5 text-xs sm:text-sm font-semibold uppercase tracking-wider text-white shadow-md shadow-chichen-navy/20 transition-all duration-300 hover:bg-chichen-navy/90 hover:scale-[1.02]"
             >
               {bookNowText}
             </a>

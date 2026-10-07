@@ -40,12 +40,12 @@ export default function Logo({
         <div className="text-center leading-tight">
           <span
             className={`block font-serif text-xl sm:text-2xl font-bold tracking-[0.16em] ${
-              isDark ? "text-white" : "text-[#1C2E26]"
+              isDark ? "text-white" : "text-chichen-charcoal"
             }`}
           >
             {line1 || "SAN GENNARO"}
           </span>
-          <span className="block font-sans text-[9px] sm:text-[10px] font-semibold tracking-[0.24em] uppercase text-[#C49B5B] mt-0.5">
+          <span className="block font-sans text-[9px] sm:text-[10px] font-semibold tracking-[0.24em] uppercase text-gold-400 mt-0.5">
             {line2 || "CATACOMBS TICKETS"}
           </span>
         </div>
@@ -67,12 +67,12 @@ export default function Logo({
     <div className="flex min-w-0 flex-col justify-center">
       <span
         className={`block truncate font-serif text-[15px] sm:text-[17px] font-bold tracking-[0.16em] leading-tight ${
-          isDark ? "text-white group-hover:text-[#D4A559]" : "text-[#1C2E26] group-hover:text-[#18382E]"
+          isDark ? "text-white group-hover:text-gold-400" : "text-chichen-charcoal group-hover:text-chichen-navy"
         }`}
       >
         {line1 || "SAN GENNARO"}
       </span>
-      <span className="block truncate font-sans text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.24em] uppercase text-[#C49B5B] leading-none mt-1">
+      <span className="block truncate font-sans text-[8.5px] sm:text-[9.5px] font-semibold tracking-[0.24em] uppercase text-gold-400 leading-none mt-1">
         {line2 || "CATACOMBS TICKETS"}
       </span>
     </div>
