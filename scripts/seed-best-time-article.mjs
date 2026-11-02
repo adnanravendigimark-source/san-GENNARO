@@ -95,7 +95,7 @@ const articleRecord = {
   focusKeyword: focusKeyword,
   noIndex: false,
   noFollow: false,
-  canonicalUrl: "https://www.sangennarocatacombstickets.com/blog/best-time-to-visit-catacombs-of-san-gennaro",
+  canonicalUrl: "https://www.sangennaro-tickets.com/blog/best-time-to-visit-catacombs-of-san-gennaro",
   ogTitle: "Best Time to Visit San Gennaro Catacombs (Hours & Tour Tips)",
   ogDescription:
     "Discover the best time to visit San Gennaro Catacombs in Naples. Learn about morning vs afternoon tours, underground microclimate, and crowd tips.",
